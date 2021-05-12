@@ -29,8 +29,8 @@ jobs:
       # Generate mocks
       - run: flutter pub run build_runner build
 
-      # Run widget tests for our flutter project.
-      - run: flutter test
-
       # Statically analyze the Dart code for any errors.
       - run: flutter analyze .
+
+      # Run widget tests for our flutter project.
+      - run: flutter test
