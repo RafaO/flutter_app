@@ -10,12 +10,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_app/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Starts with No data text', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('loading'), findsOneWidget);
+    expect(find.text('No data'), findsOneWidget);
 
     // Tap the '+' icon and trigger a frame.
     // await tester.tap(find.byIcon(Icons.add));
