@@ -11,5 +11,4 @@ class Forecast extends Equatable {
 
   @override
   List<Object> get props => [date, state, place];
-
 }

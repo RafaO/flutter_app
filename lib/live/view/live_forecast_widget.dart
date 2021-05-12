@@ -15,7 +15,8 @@ class LiveForecastWidget extends StatefulWidget {
 class _LiveForecastWidgetState extends State<LiveForecastWidget> {
   @override
   Widget build(BuildContext context) => BlocProvider<LiveForecastBloc>(
-        create: (BuildContext context) => LiveForecastBloc(ForecastRepository()),
+        create: (BuildContext context) =>
+            LiveForecastBloc(ForecastRepository()),
         child: BlocBuilder<LiveForecastBloc, ForecastState>(
             builder: (context, state) {
           final bloc = BlocProvider.of<LiveForecastBloc>(context);
