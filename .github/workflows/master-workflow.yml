@@ -61,7 +61,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: android-release.aab
+          name: android-release
           path: build/app/outputs/bundle/release/app-release.aab
 
   build_ios:
@@ -79,5 +79,17 @@ jobs:
       - name: Upload iPA
         uses: actions/upload-artifact@v2
         with:
-          name: ios-build
+          name: ios-release
           path: build/ios/iphoneos
+
+  release:
+    needs: [test, build_android, build_ios]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: ios-release
+      - uses: actions/download-artifact@v2
+        with:
+          name: android-release
+      # TODO upload to stores
