@@ -24,7 +24,7 @@ void main() {
 
     test('Initial state is NoForecast', () {
       // then
-      expect(_subject.state, NoForecast());
+      expect(_subject.state, Loading());
     });
 
     test('When add place, starts loading', () async {
