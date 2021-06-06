@@ -59,7 +59,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: android-debug
-          path: build/app/outputs/bundle/debug/app-debug.apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
 
   build_ios:
     runs-on: macOS-latest
@@ -83,10 +83,17 @@ jobs:
     needs: [test, build_android, build_ios]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - uses: actions/download-artifact@v2
         with:
           name: ios-debug
       - uses: actions/download-artifact@v2
         with:
           name: android-debug
-      # TODO upload to firebase app distribution
+      - name: upload builds to Firebase App Distribution
+        uses: hasretsariyer/firebase-app-distribution-github-action@v1.0
+        with:
+          app_id: ${{secrets.FIREBASE_ANDROID_APP_ID}}
+          firebase_token: ${{secrets.FIREBASE_TOKEN}}
+          tester_groups: testers
+          app_file: app-debug.apk
