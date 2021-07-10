@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Set up firebase
+
+- Create Firebase app [instructions](https://firebase.google.com/docs/flutter/setup)
+- Add secrets to your Github repository [instructions](https://github.com/marketplace/actions/firebase-app-distribution):
+    - FIREBASE_ANDROID_APP_ID
+    - FIREBASE_TOKEN
+- Add testers group
