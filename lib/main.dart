@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/live/view/live_forecast_widget.dart';
+import 'package:flutter_app/forecast/view/live_forecast_widget.dart';
 
 void main() {
   runApp(MyApp());

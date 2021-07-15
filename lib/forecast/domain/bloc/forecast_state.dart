@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_app/live/domain/model/forecast.dart';
+import 'package:flutter_app/forecast/domain/model/forecast.dart';
 
 abstract class ForecastState extends Equatable {
   @override

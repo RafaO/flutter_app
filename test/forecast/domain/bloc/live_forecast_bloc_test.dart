@@ -1,10 +1,10 @@
-import 'package:flutter_app/live/data/forecast_repository.dart';
-import 'package:flutter_app/live/domain/bloc/forecast_event.dart';
-import 'package:flutter_app/live/domain/bloc/forecast_state.dart';
-import 'package:flutter_app/live/domain/bloc/live_forecast_bloc.dart';
-import 'package:flutter_app/live/domain/model/forecast.dart';
-import 'package:flutter_app/live/domain/model/place.dart';
-import 'package:flutter_app/live/domain/model/surf_state.dart';
+import 'package:flutter_app/forecast/data/forecast_repository.dart';
+import 'package:flutter_app/forecast/domain/bloc/forecast_event.dart';
+import 'package:flutter_app/forecast/domain/bloc/forecast_state.dart';
+import 'package:flutter_app/forecast/domain/bloc/live_forecast_bloc.dart';
+import 'package:flutter_app/forecast/domain/model/forecast.dart';
+import 'package:flutter_app/forecast/domain/model/place.dart';
+import 'package:flutter_app/forecast/domain/model/surf_state.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pedantic/pedantic.dart';

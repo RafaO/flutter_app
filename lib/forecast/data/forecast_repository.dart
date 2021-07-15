@@ -1,6 +1,6 @@
-import 'package:flutter_app/live/domain/model/forecast.dart';
-import 'package:flutter_app/live/domain/model/place.dart';
-import 'package:flutter_app/live/domain/model/surf_state.dart';
+import 'package:flutter_app/forecast/domain/model/forecast.dart';
+import 'package:flutter_app/forecast/domain/model/place.dart';
+import 'package:flutter_app/forecast/domain/model/surf_state.dart';
 
 class ForecastRepository {
   Future<Forecast> getForecast(Place place) async {
