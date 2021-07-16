@@ -15,8 +15,16 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Set up firebase
+## What this template contains
+This template contains a basic skeleton of a dummy flutter application. By checking it out you will
+have a project that already does the following:
+- Run tests
+- Builds Android apk
+- Uploads the build apk to firebase app distribution
 
+## Using this template
+
+- Change package name
 - Create Firebase app [instructions](https://firebase.google.com/docs/flutter/setup)
 - Add secrets to your Github repository [instructions](https://github.com/marketplace/actions/firebase-app-distribution):
     - FIREBASE_ANDROID_APP_ID
