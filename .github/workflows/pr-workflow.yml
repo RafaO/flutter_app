@@ -97,10 +97,10 @@ jobs:
           firebase_token: ${{secrets.FIREBASE_TOKEN}}
           tester_groups: testers
           app_file: app-debug.apk
-      - name: upload iOS app to Firebase App Distribution
-        uses: hasretsariyer/firebase-app-distribution-github-action@v1.0
-        with:
-          app_id: ${{secrets.FIREBASE_IOS_APP_ID}}
-          firebase_token: ${{secrets.FIREBASE_TOKEN}}
-          tester_groups: testers
-          app_file: Runner.app
+#      - name: upload iOS app to Firebase App Distribution
+#        uses: hasretsariyer/firebase-app-distribution-github-action@v1.0
+#        with:
+#          app_id: ${{secrets.FIREBASE_IOS_APP_ID}}
+#          firebase_token: ${{secrets.FIREBASE_TOKEN}}
+#          tester_groups: testers
+#          app_file: Runner.app
