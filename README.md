@@ -31,3 +31,6 @@ have a project that already does the following:
     - FIREBASE_TOKEN
     - SERVICE_ACCOUNT_JSON. Used to upload the Android app to Google Play. Please check [this](https://developers.google.com/android-publisher/getting_started#:~:text=Google%20Play%20Console.-,Go%20to%20the%20API%20access%20page%20on%20the%20Google%20Play,Google%20Play%20Console%2C%20click%20Done.) for instructions.
 - Add testers group
+
+## Next steps
+- After setting up an iOS developer account, verify that iOS ipa file is properly built and uploaded to Firebase.
