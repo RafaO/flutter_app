@@ -96,6 +96,6 @@ jobs:
         with:
           serviceAccountJson: ${{secrets.SERVICE_ACCOUNT_JSON}}
           packageName: com.example.flutter_app
-          releaseFile: android-release
+          releaseFiles: app-release.aab
           track: internal
       # TODO upload to app store
