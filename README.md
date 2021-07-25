@@ -1,10 +1,12 @@
-# flutter_app
+# Flutter template repository
 
-Flutter app skeleton
+This repository contains a flutter project with a sample feature to showcase the BloC architecture and
+a basic CI setup to get started with code analysis, unit test running and apps generation and distribution.
+
+This readme contains just a small introduction to the project and the first steps to getting started with it.
+If this you want to know more details, please check the [blogpost](https://medium.com/@rafaelmiguel.ortega/flutter-template-repository-ca6804c70b4d) attached to it with an extended explanation. 
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
@@ -16,13 +18,15 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## What this template contains
-This template contains a basic skeleton of a dummy flutter application. By checking it out you will
-have a project that already does the following:
-- Run tests
-- Builds Android apk
-- Uploads the build apk to firebase app distribution
+
+Apart from the flutter code, you can find two different workflows, both using Github actions.
+
+One that will be executed on Pull Requests and will be slightly different to the one executed on pushes to
+the main branch. 
 
 ## Using this template
+
+Here are the first steps to get started if you want to use this template as base for your own flutter app:
 
 - Change package name
 - Create Firebase app [instructions](https://firebase.google.com/docs/flutter/setup)
