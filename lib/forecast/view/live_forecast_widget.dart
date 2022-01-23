@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_app/forecast/data/forecast_repository.dart';
 import 'package:flutter_app/forecast/domain/bloc/forecast_event.dart';
 import 'package:flutter_app/forecast/domain/bloc/forecast_state.dart';
