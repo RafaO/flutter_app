@@ -7,34 +7,32 @@ import 'package:flutter_app/forecast/domain/bloc/live_forecast_bloc.dart';
 import 'package:flutter_app/forecast/domain/model/place.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class LiveForecastWidget extends StatefulWidget {
-  @override
-  _LiveForecastWidgetState createState() => _LiveForecastWidgetState();
-}
+class LiveForecastWidget extends StatelessWidget {
+  const LiveForecastWidget({Key key}) : super(key: key);
 
-class _LiveForecastWidgetState extends State<LiveForecastWidget> {
   @override
-  Widget build(BuildContext context) => BlocProvider<LiveForecastBloc>(
+  Widget build(BuildContext context) =>
+      BlocProvider<LiveForecastBloc>(
         create: (BuildContext context) =>
             LiveForecastBloc(ForecastRepository()),
         child: BlocBuilder<LiveForecastBloc, ForecastState>(
             builder: (context, state) {
-          final bloc = BlocProvider.of<LiveForecastBloc>(context);
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text("Get forecast for Málaga"),
-            ),
-            body: Column(
-              children: [
-                _text(state),
-                ElevatedButton(
-                  onPressed: () => bloc.add(PlaceSelected(Place("Málaga"))),
-                  child: Text("Get forecast"),
-                )
-              ],
-            ),
-          );
-        }),
+              final bloc = BlocProvider.of<LiveForecastBloc>(context);
+              return Scaffold(
+                appBar: AppBar(
+                  title: const Text("Get forecast for Málaga"),
+                ),
+                body: Column(
+                  children: [
+                    _text(state),
+                    ElevatedButton(
+                      onPressed: () => bloc.add(PlaceSelected(Place("Málaga"))),
+                      child: Text("Get forecast"),
+                    )
+                  ],
+                ),
+              );
+            }),
       );
 
   Widget _text(ForecastState state) {
