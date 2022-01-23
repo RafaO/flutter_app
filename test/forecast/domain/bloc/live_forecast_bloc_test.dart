@@ -14,13 +14,9 @@ import 'live_forecast_bloc_test.mocks.dart';
 
 @GenerateMocks([ForecastRepository])
 void main() {
-  MockForecastRepository _repo;
-  LiveForecastBloc _subject;
+  MockForecastRepository _repo = MockForecastRepository();
+  LiveForecastBloc _subject = LiveForecastBloc(_repo);
   group('Bloc', () {
-    setUp(() {
-      _repo = MockForecastRepository();
-      _subject = LiveForecastBloc(_repo);
-    });
 
     test('Initial state is NoForecast', () {
       // then
