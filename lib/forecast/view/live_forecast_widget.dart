@@ -8,7 +8,7 @@ import 'package:flutter_app/forecast/domain/model/place.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LiveForecastWidget extends StatelessWidget {
-  const LiveForecastWidget({Key key}) : super(key: key);
+  const LiveForecastWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) =>
