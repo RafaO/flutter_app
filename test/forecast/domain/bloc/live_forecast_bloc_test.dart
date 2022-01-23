@@ -17,7 +17,6 @@ void main() {
   MockForecastRepository _repo = MockForecastRepository();
   LiveForecastBloc _subject = LiveForecastBloc(_repo);
   group('Bloc', () {
-
     test('Initial state is NoForecast', () {
       // then
       expect(_subject.state, NoForecast());
