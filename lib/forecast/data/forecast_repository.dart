@@ -6,8 +6,8 @@ class ForecastRepository {
   Future<Forecast> getForecast(Place place) async {
     // TODO get real data
     return Future.delayed(
-      Duration(seconds: 2),
-      () => Forecast(DateTime.now(), SurfState.beginner, Place("Málaga")),
+      const Duration(seconds: 2),
+      () => Forecast(DateTime.now(), SurfState.beginner, const Place("Málaga")),
     );
   }
 }
