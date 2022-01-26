@@ -25,12 +25,12 @@ void main() {
     test('When add place, starts loading', () async {
       // given
       final forecast =
-          Forecast(DateTime.now(), SurfState.beginner, Place("Valencia"));
+          Forecast(DateTime.now(), SurfState.beginner, const Place("Valencia"));
       when(_repo.getForecast(any))
           .thenAnswer((realInvocation) async => forecast);
 
       // when
-      _subject.add(PlaceSelected(Place("Valencia")));
+      _subject.add(PlaceSelected(const Place("Valencia")));
 
       // then
       unawaited(expectLater(_subject.stream,

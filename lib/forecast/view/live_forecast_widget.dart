@@ -24,8 +24,9 @@ class LiveForecastWidget extends StatelessWidget {
               children: [
                 _text(state),
                 ElevatedButton(
-                  onPressed: () => bloc.add(PlaceSelected(Place("Málaga"))),
-                  child: Text("Get forecast"),
+                  onPressed: () =>
+                      bloc.add(PlaceSelected(const Place("Málaga"))),
+                  child: const Text("Get forecast"),
                 )
               ],
             ),
@@ -37,9 +38,9 @@ class LiveForecastWidget extends StatelessWidget {
     if (state is ForecastReceived) {
       return Text(state.forecast.state.toString());
     } else if (state is Loading) {
-      return Text("loading");
+      return const Text("loading");
     } else {
-      return Text("No data");
+      return const Text("No data");
     }
   }
 }
