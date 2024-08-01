@@ -56,6 +56,25 @@ jobs:
       # Get flutter dependencies.
       - run: flutter pub get
 
+      # Generate the keystore file
+      - name: Decode keystore file
+        env:
+          CERTIFICATE_BASE64: ${{ secrets.STORE_FILE_CONTENT }}
+        run: echo $CERTIFICATE_BASE64 | base64 --decode > android/app/my-keystore.jks
+
+      - name: Create temporary key.properties
+        run: |
+          echo "storeFile=my-keystore.jks" > android/key.properties
+          echo "storePassword=${{ secrets.STORE_PASSWORD }}" >> android/key.properties
+          echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+          echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+
+      # Generate the .env file
+      - name: Generate .env file
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+        run: echo "spotify_client_id=SPOTIFY_CLIENT_ID" > .env
+
       # Build Android release
       - run: flutter build appbundle --release
 

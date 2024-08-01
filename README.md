@@ -31,6 +31,9 @@ Here are the first steps to get started if you want to use this template as base
 - Change package name
 - Create Firebase app [instructions](https://firebase.google.com/docs/flutter/setup)
 - Add secrets to your Github repository [instructions](https://github.com/marketplace/actions/firebase-app-distribution):
+    - STORE_PASSWORD
+    - KEY_ALIAS
+    - KEY_PASSWORD
     - FIREBASE_ANDROID_APP_ID
     - FIREBASE_TOKEN
     - SERVICE_ACCOUNT_JSON. Used to upload the Android app to Google Play. Please check [this](https://developers.google.com/android-publisher/getting_started#:~:text=Google%20Play%20Console.-,Go%20to%20the%20API%20access%20page%20on%20the%20Google%20Play,Google%20Play%20Console%2C%20click%20Done.) for instructions.
